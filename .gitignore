@@ -1,0 +1,13 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Terraform variable files with possible secrets
+# Uncomment if your tfvars contain secrets:
+# *.tfvars
+
+# macOS
+.DS_Store
