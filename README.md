@@ -163,16 +163,6 @@ terraform apply -var-file="terraform.tfvars.prod"
 
 ---
 
-## 7. Viva / Exam Q&A Reference
-
-1. **Q: Why use Workspaces instead of duplicate main.tf files?**  
-   *A:* Workspaces avoid code duplication by using the exact same Terraform code for both environments while maintaining separate, isolated state files.
-
-2. **Q: Why are hardcoded resource IDs bad practice in Terraform?**  
-   *A:* Hardcoded IDs break portability across regions or AWS accounts. Data sources query resources dynamically, making code adaptable and robust.
-
-3. **Q: How does `count` work when switching environments?**  
-   *A:* `count` reads `var.instance_count` passed via the `.tfvars` file. For `dev`, `instance_count = 1` provisions 1 server; for `prod`, `instance_count = 3` provisions 3 servers dynamically.
 
 4. **Q: How do we verify tags are correct for dev vs prod?**  
    *A:* `var.environment` is passed into the tags block of all resources (`Environment = var.environment`), guaranteeing that tags dynamically reflect the targeted environment.
