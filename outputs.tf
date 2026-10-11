@@ -9,7 +9,7 @@
 
 output "current_workspace" {
   description = "The active Terraform workspace (dev or prod)."
-  value       = terraform.workspace
+  value       = terraform.workspace;
 }
 
 output "vpc_id" {
